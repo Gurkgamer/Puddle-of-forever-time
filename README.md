@@ -1,6 +1,6 @@
 My third game, made in Godot https://gurkgamer.itch.io/puddle-of-forever-time
 
-Submission for Novice Summer Jam Series 2024: Mini Jam 2 https://itch.io/jam/nsjs-2024-jam-3
+Submission for Novice Summer Jam Series 2024: Mini Jam 3 https://itch.io/jam/nsjs-2024-jam-3
 
 CREDITS
 
