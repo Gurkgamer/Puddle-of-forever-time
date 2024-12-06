@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjnaow108lycd"]
+
+[ext_resource type="Texture2D" uid="uid://th4qir3ewgi5" path="res://Images/button1.png" id="1_go2mp"]
+[ext_resource type="Script" path="res://Script/fake_button.gd" id="2_jm8t8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3xmu"]
+size = Vector2(6, 5)
+
+[node name="FakeButton" type="Sprite2D"]
+y_sort_enabled = true
+position = Vector2(0, 8)
+texture = ExtResource("1_go2mp")
+script = ExtResource("2_jm8t8")
+
+[node name="Area2D" type="Area2D" parent="."]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_t3xmu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

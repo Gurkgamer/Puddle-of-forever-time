@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtarqgoiaf1cs"
+path="res://.godot/imported/Smooth As Glass.ogg-fb569cf8da6339de63b01ba125cff2ab.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/BGM/Smooth As Glass.ogg"
+dest_files=["res://.godot/imported/Smooth As Glass.ogg-fb569cf8da6339de63b01ba125cff2ab.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

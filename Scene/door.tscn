@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://drvmf1ob1g0ad"]
+
+[ext_resource type="Script" path="res://Script/door.gd" id="1_f4hlf"]
+[ext_resource type="Texture2D" uid="uid://vx4rgm1rlul6" path="res://Images/SpriteSheet/Forest/door_new_closed.png" id="2_dk2ap"]
+[ext_resource type="AudioStream" uid="uid://dou34ik5xxn2w" path="res://Audio/SFX/Simple Explosion 001.wav" id="3_qjqt8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jq8e"]
+size = Vector2(26, 17)
+
+[node name="Door" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_f4hlf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -19)
+texture = ExtResource("2_dk2ap")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(23, -18)
+polygon = PackedVector2Array(-13, 16, -3, 13, 3, 13, 14, 8, 4, -2, -13, -1)
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-26.875, -19)
+polygon = PackedVector2Array(10.875, 17, -0.125, 14, -10.125, 13, -3.125, 0, 10.875, 0)
+
+[node name="Block" type="CollisionShape2D" parent="StaticBody2D"]
+unique_name_in_owner = true
+position = Vector2(-3, -10.5)
+shape = SubResource("RectangleShape2D_2jq8e")
+
+[node name="DoorOpenSFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_qjqt8")

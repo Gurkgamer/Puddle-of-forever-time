@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://wml03a8jt6cs"
+path="res://.godot/imported/A Little R & R.ogg-71dfacf0ba8080e229a60d6d777be4ad.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/BGM/A Little R & R.ogg"
+dest_files=["res://.godot/imported/A Little R & R.ogg-71dfacf0ba8080e229a60d6d777be4ad.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

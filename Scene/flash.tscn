@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://76qjtvyfrt3k"]
+
+[ext_resource type="Script" path="res://Script/flash.gd" id="1_gvlgp"]
+
+[sub_resource type="Gradient" id="Gradient_6yqby"]
+offsets = PackedFloat32Array(0, 0.00619835)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_urqj0"]
+gradient = SubResource("Gradient_6yqby")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_gvlgp")
+
+[node name="Node2D" type="Sprite2D" parent="."]
+position = Vector2(532.5, 334.25)
+scale = Vector2(5.16016, 669.5)
+texture = SubResource("GradientTexture1D_urqj0")
+
+[node name="InABang" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="InABang" to="." method="_on_in_a_bang_timeout"]
